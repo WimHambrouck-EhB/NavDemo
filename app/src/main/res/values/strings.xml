@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NavDemo</string>
+    <string name="some_text">Some text</string>
+    <string name="updated">Updated!</string>
+    <string name="open_second_activity">Open second activity</string>
+    <string name="name">Name</string>
+    <string name="what_s_your_first_name">What\'s your first name?</string>
+    <string name="hello">Hello %1$s</string>
+</resources>
