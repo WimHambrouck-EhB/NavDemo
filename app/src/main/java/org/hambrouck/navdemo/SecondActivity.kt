@@ -2,6 +2,7 @@ package org.hambrouck.navdemo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
 import org.hambrouck.navdemo.databinding.ActivityMainBinding
 import org.hambrouck.navdemo.databinding.ActivitySecondBinding
 
@@ -16,6 +17,7 @@ class SecondActivity : AppCompatActivity() {
 
         val name = intent.getStringExtra("name")
 
-        binding.txtHelloUser.text = getString(R.string.hello, name)
+
+
     }
 }

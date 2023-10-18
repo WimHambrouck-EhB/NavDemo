@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/simpleFragment">
+
+    <fragment
+        android:id="@+id/simpleFragment"
+        android:name="org.hambrouck.navdemo.SimpleFragment"
+        android:label="fragment_simple"
+        tools:layout="@layout/fragment_simple" >
+        <action
+            android:id="@+id/action_simpleFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="org.hambrouck.navdemo.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dataFragment"
+            app:destination="@id/dataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="org.hambrouck.navdemo.DataFragment"
+        android:label="fragment_data"
+        tools:layout="@layout/fragment_data" >
+        <argument
+            android:name="first_name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dataFragment_to_simpleFragment"
+            app:destination="@id/simpleFragment"
+            app:popUpTo="@id/simpleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
